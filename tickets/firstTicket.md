@@ -63,7 +63,8 @@ Your job is to begin work on the LMS by setting up the domain objects shown abov
 - cohortStartDate: LocalDate
 - username: String
 - password: String
-  create a no args constructor and an all args except id constructor.
+
+##### Create a no args constructor and an all args except id constructor.
 
 ### Add Spring Security and create a Security Config
 
