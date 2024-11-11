@@ -21,7 +21,13 @@ public class AssignmentService {
         return assignmentRepository.findById(id).orElse(new Assignment());
     }
 
-    public Assignment saveAssignment(Assignment assignment) {
+    public Assignment updateAssignment(Assignment assignment) {
+        return assignmentRepository.save(assignment);
+    }
+
+    public Assignment createAssignment(User user) {
+        Assignment assignment = new Assignment();
+        assignment.setUser(user);
         return assignmentRepository.save(assignment);
     }
 }

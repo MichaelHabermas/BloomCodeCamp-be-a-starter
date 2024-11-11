@@ -13,6 +13,7 @@ public enum AssignmentStatusEnum {
 
     private String status;
     private Integer step;
+
     AssignmentStatusEnum(String status, Integer step) {
         this.status = status;
         this.step = step;

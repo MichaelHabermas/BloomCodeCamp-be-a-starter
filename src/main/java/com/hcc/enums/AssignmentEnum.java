@@ -19,8 +19,8 @@ public enum AssignmentEnum {
     ASSIGNMENT_13(13, "data driven websites"),
     ASSIGNMENT_14(14, "SQL Reporting");
 
-    private int assignmentNumber;
-    private String assignmentName;
+    private final int assignmentNumber;
+    private final String assignmentName;
 
     AssignmentEnum (int assignmentNumber, String assignmentName) {
         this.assignmentNumber = assignmentNumber;

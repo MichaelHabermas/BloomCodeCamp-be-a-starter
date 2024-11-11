@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
+@CrossOrigin()
 @RestController
 @RequestMapping("/api/assignments")
 public class AssignmentController {
@@ -30,13 +31,13 @@ public class AssignmentController {
 
     @PutMapping()
     ResponseEntity<?> updateAssignment(@AuthenticationPrincipal User user, @RequestBody Assignment assignment) {
-        Assignment updatedAssignment = assignmentService.saveAssignment(assignment);
+        Assignment updatedAssignment = assignmentService.updateAssignment(assignment);
         return ResponseEntity.ok(updatedAssignment);
     }
 
     @PostMapping()
-    ResponseEntity<?> createAssignment(@AuthenticationPrincipal User user, @RequestBody Assignment assignment) {
-        Assignment newAssignment = assignmentService.saveAssignment(assignment);
+    ResponseEntity<?> createAssignment(@AuthenticationPrincipal User user) {
+        Assignment newAssignment = assignmentService.createAssignment(user);
         return ResponseEntity.ok(newAssignment);
     }
 }
